@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:instance",
+ "creation": "2025-09-12 15:55:07.987575",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "instance",
+  "valid_till",
+  "column_break_xzbd",
+  "status",
+  "section_break_cwmj",
+  "users",
+  "quota_tab",
+  "set_quota_in_instance",
+  "quota"
+ ],
+ "fields": [
+  {
+   "fieldname": "instance",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Instance",
+   "options": "SowaanERP Instance Credential",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_xzbd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Valid Till",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_cwmj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "users",
+   "fieldtype": "Table",
+   "label": "Users",
+   "options": "SowaanERP Instance User"
+  },
+  {
+   "fieldname": "quota_tab",
+   "fieldtype": "Tab Break",
+   "label": "Quota"
+  },
+  {
+   "fieldname": "quota",
+   "fieldtype": "JSON",
+   "label": "Quota"
+  },
+  {
+   "depends_on": "eval:doc.quota",
+   "fieldname": "set_quota_in_instance",
+   "fieldtype": "Button",
+   "label": "\ud83d\ude80 Set Quota in Instance"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-15 13:21:39.832977",
+ "modified_by": "Administrator",
+ "module": "Sowaan Admin",
+ "name": "SowaanERP Instance",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
