@@ -148,23 +148,11 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"sowaan_admin.tasks.all"
-# 	],
-# 	"daily": [
-# 		"sowaan_admin.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"sowaan_admin.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"sowaan_admin.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"sowaan_admin.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"daily": [
+		"sowaan_admin.scheduler.daily_fetch_users_for_all_instances"
+	]
+}
 
 # Testing
 # -------

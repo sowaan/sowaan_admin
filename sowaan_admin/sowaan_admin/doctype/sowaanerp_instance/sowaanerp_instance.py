@@ -104,3 +104,4 @@ def update_quota(docname):
 	except Exception as e:
 		frappe.log_error(frappe.get_traceback(), 'Update Quota Error')
 		frappe.throw(_('Failed to update quota: {0}').format(str(e)))
+
